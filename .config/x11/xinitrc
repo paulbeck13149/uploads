@@ -1,0 +1,13 @@
+#!/bin/sh
+
+# Load X resources
+[ -f "$XDG_CONFIG_HOME/x11/xresources" ] && xrdb -load "$XDG_CONFIG_HOME/x11/xresources"
+
+# Start compositor
+picom -b &
+
+# Set wallpaper
+[ -f "${WALLPAPER_DIR}/current" ] && xwallpaper --zoom "${WALLPAPER_DIR}/current"
+
+# Start dwm
+exec dwm
