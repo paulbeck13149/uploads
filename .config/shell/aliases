@@ -2,17 +2,19 @@
 # Common aliases
 
 # Basic utilities
-alias ls="ls --color auto"
-alias ll="ls -lah"
-alias la="ls -A"
-alias grep="grep --color auto"
-alias diff="diff --color auto"
-alias ip="ip --color auto"
-alias cp="cp -iv"
-alias mv="mv -iv"
-alias rm="rm -I"
-alias mkdir="mkdir -p"
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ls='ls --color=auto'
+alias ll='ls -lah'
+alias la='ls -A'
+alias grep='grep --color auto'
+alias diff='diff --color auto'
+alias ip='ip --color auto'
+alias cp='cp -iv'
+alias mv='mv -iv'
+alias rm='rm -I'
+alias mkdir='mkdir -p'
 
 # Program shortcuts
 alias v="$EDITOR"
-alias g="git"
+alias g='git'
