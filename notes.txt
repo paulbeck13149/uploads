@@ -1,2 +1,6 @@
 Current dwm commit hash: cfb8627a80a334f200f68c2c8f3e384313ebbaf5
-Current st commit hash: 7fb0c0cc681f36be2ad12091ef93a41671f32738
+- Patches: dwm-fullgaps-6.4.diff
+
+Current st  commit hash: 7fb0c0cc681f36be2ad12091ef93a41671f32738
+- Patches: st-alpha-0.8.5.diff
+- st-scrollback-0.8.5.diff
