@@ -1,20 +1,33 @@
 #!/bin/sh
 # Common aliases
 
-# Basic utilities
-alias ..='cd ..'
-alias ...='cd ../..'
-alias ls='ls --color=auto'
-alias ll='ls -lah'
-alias la='ls -A'
-alias grep='grep --color auto'
-alias diff='diff --color auto'
-alias ip='ip --color auto'
-alias cp='cp -iv'
-alias mv='mv -iv'
-alias rm='rm -I'
-alias mkdir='mkdir -p'
+# Navigation
+alias ..="cd .."
+alias ...="cd ../.."
+alias ls="ls --color=auto"
+alias ll="ls -lah"
+alias la="ls -A"
+alias grep="grep --color=auto"
+alias diff="diff --color=auto"
+alias ip="ip --color=auto"
+alias cp="cp -iv"
+alias mv="mv -iv"
+alias rm="rm -I"
+alias mkdir="mkdir -p"
 
 # Program shortcuts
 alias v="$EDITOR"
-alias g='git'
+alias g="git"
+
+# Package management
+alias p="sudo pacman"
+alias y="yay"
+
+# Security tools
+alias msf="msfconsole"
+alias nmap="nmap --privileged"
+
+# System monitoring
+alias df="df -h"
+alias free="free -h"
+alias cpu="top -bn1 | grep 'Cpu(s)' | sed 's/.*, *\([0-9.]*\)%* id.*/\1/' | awk '{print 100 - $1\"%\"}'"
