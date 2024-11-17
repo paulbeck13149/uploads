@@ -1,0 +1,18 @@
+#!/bin/sh
+
+case "$1" in
+    "update")
+        echo "Updating security tools..."
+        cd "$SECURITY_HOME/tools" || exit
+        for d in */; do
+            cd "$d" && git pull && cd ..
+        done
+        ;;
+    "list")
+        echo "Installed tools:"
+        ls -l "$SECURITY_HOME/tools"
+        ;;
+    *)
+        echo "Usage: sectools [update|list]"
+        ;;
+esac
