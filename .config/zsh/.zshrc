@@ -28,6 +28,22 @@ setopt AUTO_CD
 autoload -U colors && colors
 PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
 
-# NVM initialization
-[ -s "/usr/share/nvm/nvm.sh" ] && \. "/usr/share/nvm/nvm.sh"  # This loads nvm
-[ -s "/usr/share/nvm/bash_completion" ] && \. "/usr/share/nvm/bash_completion"  # This loads nvm bash_completion
+# Lazy load nvm
+nvm() {
+    unset -f nvm node npm
+    [ -s "/usr/share/nvm/nvm.sh" ] && \. "/usr/share/nvm/nvm.sh"
+    [ -s "/usr/share/nvm/bash_completion" ] && \. "/usr/share/nvm/bash_completion"
+    nvm "$@"
+}
+
+node() {
+    unset -f nvm node npm
+    [ -s "/usr/share/nvm/nvm.sh" ] && \. "/usr/share/nvm/nvm.sh"
+    node "$@"
+}
+
+npm() {
+    unset -f nvm node npm
+    [ -s "/usr/share/nvm/nvm.sh" ] && \. "/usr/share/nvm/nvm.sh"
+    npm "$@"
+}
