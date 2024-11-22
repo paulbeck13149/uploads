@@ -1,4 +1,5 @@
--- Load core configurations
-require('options')
-require('keymaps')
-require('plugins')
+-- Entry point for Neovim configuration
+require("core.options")         -- Editor options
+require("core.keymaps")         -- Key mappings
+require("core.autocmds")        -- Auto commands
+require("core.lazy")            -- Plugin management
